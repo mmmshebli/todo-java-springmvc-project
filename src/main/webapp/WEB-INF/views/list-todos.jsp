@@ -22,13 +22,13 @@
 				<td>${todo.desc}</td>
 				<td><fmt:formatDate pattern="dd/MM/yyyy" value="${todo.targetDate}"/></td>
 				<td>${todo.isDone}</td>
-				<td><a href="/update-todo?id=${todo.id}" class="btn btn-success">Update</a></td>
-				<td><a href="/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
+				<td><a href="${pageContext.request.contextPath}/update-todo?id=${todo.id}" class="btn btn-success">Update</a></td>
+				<td><a href="${pageContext.request.contextPath}/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
 			</tr>
 		</c:forEach> 
 	</table>
 	<div>
-		<a class="btn btn-success" href="/add-todo">Add Todo</a>
+		<a class="btn btn-success" href="${pageContext.request.contextPath}/add-todo">Add Todo</a>
 	</div>
 </div>
 <%@ include file="common/footer.jspf" %>
